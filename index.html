@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Polarisation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="title">
+        <p>Analysis Of Political Polarisation On Online Platforms</p>
+    </div>
+    <div class="dialog">
+        <p class="h">TWEET DATASET OF DIFFERENT POLITICAL PARTIES (2,10,000)</p>
+    </div>
+    <div class="container">
+        <div class="box-container">
+            <div class="box">
+                <a href="{{ url_for('show_csv', filename='Narendra Modi_data.csv') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='img1.jpeg') }}" alt="">
+                </a>
+            </div>
+            <p style="color: orangered;">Party: BJP</p>
+
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <a href="{{ url_for('show_csv', filename='Arvind Kejriwal_data.csv') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='img2.jpg') }}" alt="">
+                </a>
+            </div>
+            <p style="color: blue;">Party: AAP</p>
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <a href="{{ url_for('show_csv', filename='Rahul Gandhi_data.csv') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='img3.webp') }}" alt="">
+                </a>
+            </div>
+            <p style="color: green;">Party: CONG</p>
+        </div>
+    </div>
+    <div class="dialog">
+        <p class="h">YOUTUBE DATA FROM 4 DIFFERENT NEWS CHANNELS (11,309)</p>
+    </div>
+    <div class="container">
+        <div class="box-container">
+            <div class="box" id="news">
+                <a href="{{ url_for('show_csv2', filename='youtube_data_2.csv') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='img4.jpg') }}" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="dialog">
+        <p class="h">ANALYSIS OF DATASET (ON THE BASIS OF TWEETS)</p>
+    </div>
+    <div class="container">
+        <div class="box-container">
+            <div class="box" id="out">
+                <img src="static\img5.png" alt="">
+            </div>
+            <p>Polarity</p>
+        </div>
+        <div class="box-container">
+            <div class="box" id="out">
+                <img src="static\img6.png" alt="">
+            </div>
+            <p>Subjectivity</p>
+        </div>
+        <div class="box-container">
+            <div class="box" id="out">
+                <img src="static\img7.png" alt="">
+            </div>
+            <p>Sentiment</p>
+        </div>
+        
+        </div>
+
+        <div class="dialog">
+            <p class="h">ANALYSIS OF DATASET (ON THE BASIS OF NEWS CHANNELS)</p>
+        </div>
+        <div class="container" id="cont">
+            <div class="box-container">
+                <div class="box" id="cout">
+                    <img src="static\img8.png" alt="">
+                </div>
+                <p>CNN-NEWS18</p>
+            </div>
+            <div class="box-container">
+                <div class="box" id="cout">
+                    <img src="static\img9.png" alt="">
+                </div>
+                <p>INDIA TODAY</p>
+            </div>
+            <div class="box-container">
+                <div class="box" id="cout">
+                    <img src="static\img10.png" alt="">
+                </div>
+                <p>NDTV</p>
+            </div>
+            <div class="box-container">
+                <div class="box" id="cout">
+                    <img src="static\img11.png" alt="">
+                </div>
+                <p>ZEE NEWS</p>
+            </div>
+            
+            </div>
+    
+            <div class="dialog">
+                <p class="h">ANALYSIS OF DATASET (ON THE BASIS OF NEWS COVERAGE)</p>
+            </div>
+            <div class="container" id="cont">
+                <div class="box-container">
+                    <div class="box" id="cout">
+                        <img src="static\img12.png" alt="">
+                    </div>
+                    <p>CNN-NEWS18</p>
+                </div>
+                <div class="box-container">
+                    <div class="box" id="cout">
+                        <img src="static\img13.png" alt="">
+                    </div>
+                    <p>INDIA TODAY</p>
+                </div>
+                <div class="box-container">
+                    <div class="box" id="cout">
+                        <img src="static\img14.png" alt="">
+                    </div>
+                    <p>NDTV</p>
+                </div>
+                <div class="box-container">
+                    <div class="box" id="cout">
+                        <img src="static\img15.png" alt="">
+                    </div>
+                    <p>ZEE NEWS</p>
+                </div>
+                
+                </div>
+        
+    
+
+
+        <div class="dialog">
+            <p class="h">LIVE TEXT SENTIMENT ANALYSIS</p>
+        </div>
+        <div class="livedemo">
+        <form action="/analyze" method="post">
+            <textarea name="text" class="live-demo" placeholder="Enter text for sentiment analysis..." rows="4" cols="50"></textarea>
+            <br>
+            <input type="submit" value="Analyze">
+        </form>
+
+        <div class="dialog">
+            <p class="h">OUTPUT DATASET</p>
+        </div>
+        <div class="container">
+            <div class="box-container">
+                <div class="box" id="o">
+                    <a href="{{ url_for('show_csv', filename='tweet_textblob.csv') }}" target="_blank">
+                        <img src="{{ url_for('static', filename='img16.png') }}" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="box-container">
+                <div class="box" id="o">
+                    <a href="{{ url_for('show_csv', filename='youtube_textblob.csv') }}" target="_blank">
+                        <img src="{{ url_for('static', filename='img17.png') }}" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        
+
+
+</body>
+</html>
