@@ -1,0 +1,122 @@
+*{
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.title{
+    height: 100px;
+    width: 100%;
+    background: #000000c3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title p{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+.container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-around;
+}
+.box {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    filter: grayscale(50%);
+    transition: all 0.3s ease-in-out;
+    height: 400px;
+    width: 300px;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.box:hover {
+    filter: grayscale(0%);
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2);
+}
+.h{
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+    transition: all 0.3s ease;
+}
+#news{
+    width: 700px;
+}
+.h:hover{
+    text-decoration: underline; /* Underline effect on hover */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
+    font-size: 35px; /* Increase font size on hover */
+}
+.livedemo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    text-align: center;
+}
+.live-demo{
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 5px;
+}
+.livedemo input{
+    margin: 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+#out{
+    filter: grayscale(0%);
+    width: 450px;
+}
+#out img,#cout img,#o img{
+    object-fit: contain;
+}
+#cont{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+#cout{
+    width: 700px;
+    filter: grayscale(0%);
+}
+
+@media (max-width: 767px) {
+    .title{
+        width: 95%;
+        height: 80%;
+    }
+    .title p{
+        font-size: 90%;
+    }
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .box {
+        width: 100%;
+        height: 500px;
+    }
+    #news{
+        width: 80%;
+    }
+    .h {
+        font-size: 24px;
+    }
+}
